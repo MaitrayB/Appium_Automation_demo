@@ -3,14 +3,15 @@ export const config = {
   runner: 'local',
   path: '/wd/hub',
   port: 4723,
-  specs: ['./test/specs/**/*.mjs'], // Adjust according to your test file extension
+  specs: ['./test/specs/test.mjs'], // Adjust according to your test file extension
   maxInstances: 1,
   capabilities: [{
     'appium:platformName': 'Android',
     'appium:platformVersion': '13', // e.g., "11"
     'appium:deviceName': 'device1',         // e.g., "emulator-5554"
-    'appium:app': '/Users/unity/Downloads/ApiDemos-debug.apk',           // Path to your APK file
-   'appium:automationName': 'UiAutomator2'
+    'appium:app': '/Users/unity/Downloads/customerapp.apk',           // Path to your APK file
+    'appium:automationName': 'UiAutomator2',
+    'appium:autoGrantPermissions': 'true'
   }],
   framework: 'mocha',
   mochaOpts: {

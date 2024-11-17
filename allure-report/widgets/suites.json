@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"5a85e5d5d4a457787641bfa9c22296af","name":"Android App Test","statistic":{"failed":1,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":2}}]}
+{"total":1,"items":[{"uid":"f0569886aa139f9862c924ffbf93fad9","name":"Android App onboarding screen verification","statistic":{"failed":0,"broken":0,"skipped":0,"passed":3,"unknown":0,"total":3}}]}
