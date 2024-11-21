@@ -27,3 +27,30 @@ describe('Android App onboarding screen verification', () => {
     });
 
 });
+
+
+//Verify login screen
+
+describe('This test verifies UI on login screen', () => {
+  it('should verify title on login screen', async () => {
+    const LoginTitle = await driver.$('~Get started with Miwayz!');
+    await browser.pause(2000);
+    expect(await LoginTitle.getAttribute('content-desc')).to.equal("Get started with Miwayz!"); // Update expected text accordingly
+         await browser.pause(2000);
+  });
+
+    it('should verify login button label', async () => {
+      const LoginLabel = await driver.$('~Log In');
+      expect(await LoginLabel.getAttribute('content-desc')).to.equal("Log In"); // Update expected text accordingly
+    });
+
+ it('should verify Sign up button label', async () => {
+       const SignupLabel = await driver.$('//android.widget.Button[@content-desc="New to Miwayz? Sign Up!"]');
+       expect(await SignupLabel.getAttribute('content-desc')).to.equal("Log In"); // Update expected text accordingly
+     });
+
+     // expect(MenuTexts).to.equal('App1');
+      // Locate the welcome message using its accessibility ID and verify its text
+      //const welcomeMessage = await $('~Welcome'); // Replace with your actual locator
+    });
+
