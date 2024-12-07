@@ -46,11 +46,27 @@ describe('This test verifies UI on login screen', () => {
 
  it('should verify Sign up button label', async () => {
        const SignupLabel = await driver.$('//android.widget.Button[@content-desc="New to Miwayz? Sign Up!"]');
-       expect(await SignupLabel.getAttribute('content-desc')).to.equal("Log In"); // Update expected text accordingly
+       expect(await SignupLabel.getAttribute('content-desc')).to.equal("New to Miwayz? Sign Up!"); // Update expected text accordingly
      });
-
-     // expect(MenuTexts).to.equal('App1');
-      // Locate the welcome message using its accessibility ID and verify its text
-      //const welcomeMessage = await $('~Welcome'); // Replace with your actual locator
     });
 
+//login to customer app
+describe('This test will allow customer user to login', () => {
+  it('should verify title on login screen', async () => {
+    const Loginbutton = await driver.$('~Log In');
+    const CountryCode = await driver.$('//android.view.View[contains(@content-desc,"+1")]');
+    const IndiaCode = await driver.$('//android.view.View[contains(@content-desc,"+91")]');
+    const InputMobile = await driver.$('//android.widget.EditText');
+    const ContinueButton = await driver.$('//android.widget.Button[@content-desc="Continue"]');
+
+    await browser.pause(2000);
+    Loginbutton.click();
+    CountryCode.click();
+    IndiaCode.click();
+    await InputMobile.click();
+    await InputMobile.setValue('9033610692');
+    await ContinueButton.click();
+    await browser.pause(5000);
+  });
+
+    });
