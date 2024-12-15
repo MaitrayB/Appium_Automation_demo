@@ -12,7 +12,9 @@
   "description": "",
   "dependencies": {
     "appium": "^2.12.1",
-    "puppeteer": "^23.8.0"
+    "mocha-parallel-tests": "^2.3.0",
+    "puppeteer": "^23.8.0",
+    "webdriverio": "^9.4.2"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^9.2.2",

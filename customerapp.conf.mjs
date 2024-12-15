@@ -8,11 +8,12 @@ export const config = {
   capabilities: [{
     'appium:platformName': 'Android',
     'appium:platformVersion': '13', // e.g., "11"
-    'appium:deviceName': 'device1',         // e.g., "emulator-5554"
+    'appium:deviceName': 'device2',         // e.g., "emulator-5554"
     'appium:app': '/Users/unity/Downloads/customerapp.apk',           // Path to your APK file
     'appium:automationName': 'UiAutomator2',
     'appium:autoGrantPermissions': 'true'
-  }],
+  }
+  ],
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
